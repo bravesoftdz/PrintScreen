@@ -4,14 +4,15 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
 
 type
   TFrmMain = class(TForm)
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
-    { Public declarations }
+    procedure showSplash;
   end;
 
 var
@@ -20,5 +21,27 @@ var
 implementation
 
 {$R *.dfm}
+
+uses uSplash;
+
+procedure TFrmMain.FormShow(Sender: TObject);
+begin
+  showSplash;
+end;
+
+procedure TFrmMain.showSplash;
+var
+  FrmSplash: TFrmSplash;
+begin
+  FrmSplash := TFrmSplash.Create(Self);
+  FrmSplash.Show;
+  FrmSplash.Refresh;
+  Sleep(3000);
+
+  if Assigned(FrmSplash) then
+  begin
+    FrmSplash.Free;
+  end;
+end;
 
 end.
