@@ -1,7 +1,7 @@
-object Form1: TForm1
+object FrmMain: TFrmMain
   Left = 0
   Top = 0
-  Caption = 'Form1'
+  Caption = 'Print Screen'
   ClientHeight = 209
   ClientWidth = 453
   Color = clBtnFace
