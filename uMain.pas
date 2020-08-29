@@ -8,6 +8,7 @@ uses
 
 type
   TFrmMain = class(TForm)
+    pnlHeader: TPanel;
     procedure FormShow(Sender: TObject);
   private
     { Private declarations }
