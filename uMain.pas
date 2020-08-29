@@ -15,6 +15,7 @@ type
     pnlSave: TPanel;
     pnlNew: TPanel;
     Panel1: TPanel;
+    pnlPrint: TPanel;
     procedure FormShow(Sender: TObject);
   private
     { Private declarations }

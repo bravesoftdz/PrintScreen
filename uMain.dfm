@@ -127,4 +127,15 @@ object FrmMain: TFrmMain
       ExplicitWidth = 60
     end
   end
+  object pnlPrint: TPanel
+    Left = 0
+    Top = 50
+    Width = 614
+    Height = 304
+    Align = alClient
+    ParentBackground = False
+    TabOrder = 1
+    ExplicitTop = 16
+    ExplicitHeight = 338
+  end
 end
