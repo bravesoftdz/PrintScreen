@@ -1,26 +1,30 @@
 object FrmMain: TFrmMain
   Left = 0
   Top = 0
+  BiDiMode = bdLeftToRight
+  BorderStyle = bsSingle
   Caption = 'Print Screen'
-  ClientHeight = 344
-  ClientWidth = 604
-  Color = clBtnFace
+  ClientHeight = 354
+  ClientWidth = 614
+  Color = clWhite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  ParentBiDiMode = False
+  Position = poScreenCenter
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object pnlHeader: TPanel
     Left = 0
     Top = 0
-    Width = 604
-    Height = 49
+    Width = 614
+    Height = 50
     Align = alTop
-    Color = cl3DLight
+    Color = clSilver
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -29,5 +33,98 @@ object FrmMain: TFrmMain
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    object pnlSave: TPanel
+      Tag = 1
+      Left = 61
+      Top = 1
+      Width = 60
+      Height = 48
+      Align = alLeft
+      TabOrder = 0
+      ExplicitLeft = 111
+      object btnSave: TImage
+        Left = 1
+        Top = 1
+        Width = 58
+        Height = 46
+        Cursor = crHandPoint
+        Align = alClient
+        Center = True
+        ParentShowHint = False
+        Picture.Data = {
+          0954506E67496D61676589504E470D0A1A0A0000000D49484452000000180000
+          00180806000000E0773DF800000006624B474400FF00FF00FFA0BDA793000001
+          BB4944415478DA63949090106565659DC1C0C0E00EC4DC0CE481DF407CEADFBF
+          7F394F9F3EBD802CC1282727B7E6FFFFFFC1641A8C0E3E012D71075A72026E81
+          ACACEC173497DF02E22B40FC178F413C406C0EC442842C0159F01F49B2F6F1E3
+          C7AD40FA3F030100F4B920D0E79B804C1B2CD21F8172EE4F9E3C39896CC12DA0
+          E11AC4180E03F2F2F28640D79EC321FD1128678F6CC12EA005EEA404B8929212
+          FFEFDFBF3FE0517214D982778C8C8C2A8F1E3D7A4FAC05C0600A0306C54A3C4A
+          7EA3C7C1612626A6FC870F1F5E62C013C9A2A2A23C9C9C9C5E40C3A702B922F8
+          1C816E01D5C1A80543C7823FC024BC12986AF641F9CE401C0EC4CCD4B0E037B4
+          6CD98F2C08CCC54E40F11D40262B4516005DDE08CC7C0DD8E48019AD11E8AB3A
+          8A2C00BA5216E8FA27D8E4A4A4A4649999991F5164013B3B3BC79D3B777E6293
+          535050E0F8FBF7EF778A2C00161D46C0A2E33C3639A05E1320759A220B806035
+          B0940DC3A11714C96E945A0002537FFDFA55FEF2E5CBAF200EB4989E0864C613
+          D288ADCAC4053E0231A81A6404620B20E62342CF1746191999D5C0A418428462
+          72C02A466052130126B569408E2703A432A7060085CA36600ACB0600A49EC165
+          BA399B730000000049454E44AE426082}
+        Proportional = True
+        ShowHint = True
+        ExplicitLeft = 62
+        ExplicitTop = -4
+        ExplicitWidth = 55
+        ExplicitHeight = 48
+      end
+    end
+    object pnlNew: TPanel
+      Left = 1
+      Top = 1
+      Width = 60
+      Height = 48
+      Align = alLeft
+      TabOrder = 1
+      ExplicitLeft = 111
+      object btnNew: TImage
+        Left = 1
+        Top = 1
+        Width = 58
+        Height = 46
+        Cursor = crHandPoint
+        Align = alClient
+        Center = True
+        ParentShowHint = False
+        Picture.Data = {
+          0954506E67496D61676589504E470D0A1A0A0000000D49484452000000180000
+          00180806000000E0773DF800000006624B474400FF00FF00FFA0BDA793000001
+          734944415478DAB5964D4A034110852B6E741310976E1CFC59EA0914577A0423
+          241E2007F027D98B8AAE3D80E2DF09A2AEC47802DD298803BA14212E928DC6F7
+          986E69C799EE4E32F3E083D049D5EBAEAE4C4D41EC9A0225B008E6C0A85AFF00
+          0FE0065C80E7B4048594F500EC801530E4D8C4B732A981D0C7A0020E41517AD3
+          27A882139BC106D8B59CCCA52ED804FB4906DCF9D100C94D93357D129D2C00F7
+          8EB22C803BF5791E341DE59A05A1363897A85B6C8A9FACEBF8FD29283388ADF8
+          28EE6EE9D5E00BCC30A80EB65D85EDC380AA31E81A2CE56470C9A037301EFBC2
+          BC505F255DFC2B0D3A60D8B15B5FC54FD561A23618C9C9A09D658918739B54A2
+          2BB0EC91A09F4B6EE4DDA65B0C9A044F92CF1F6D5A079D81D58C0D7E1F15D484
+          4413CAF7619774A1A65A124DC0D0DC55191C4B368FEB8A3AC1BF64EB606F0013
+          26E7D03AD00B598E4C96A5AA776E33A078271CFA9C11AEEE62B770E8B3DDBD86
+          BEA940A2EED2AF2D636AFD5DFEBEB6BCA425F8010AEF526927BAC85C00000000
+          49454E44AE426082}
+        Proportional = True
+        ShowHint = True
+        ExplicitWidth = 55
+        ExplicitHeight = 48
+      end
+    end
+    object Panel1: TPanel
+      Left = 121
+      Top = 1
+      Width = 492
+      Height = 48
+      Align = alClient
+      TabOrder = 2
+      ExplicitLeft = 111
+      ExplicitWidth = 60
+    end
   end
 end
