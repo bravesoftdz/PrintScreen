@@ -6,6 +6,8 @@ object FrmMain: TFrmMain
   ClientHeight = 359
   ClientWidth = 584
   Color = clWhite
+  TransparentColor = True
+  TransparentColorValue = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -51,6 +53,7 @@ object FrmMain: TFrmMain
           E47D10A2788B84A50000000049454E44AE426082}
         Proportional = True
         ShowHint = True
+        Stretch = True
         OnClick = imgMenuClick
         ExplicitLeft = 8
         ExplicitTop = 8
