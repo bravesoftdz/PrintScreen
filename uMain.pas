@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Buttons,
-  Vcl.Imaging.pngimage, Vcl.Menus;
+  Vcl.Imaging.pngimage, Vcl.Menus, System.Actions, Vcl.ActnList;
 
 type
   TFrmMain = class(TForm)
@@ -14,8 +14,10 @@ type
     imgMenu: TImage;
     PopupMenu: TPopupMenu;
     imgPrint: TImage;
+    NewPrintScreen: TMenuItem;
     procedure FormShow(Sender: TObject);
     procedure imgMenuClick(Sender: TObject);
+    procedure NewPrintScreenClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -83,6 +85,11 @@ begin
   imgPrint.Picture.Assign(captureScreen);
   pnlMenu.Visible := True;
   FrmMain.TransparentColor := False;
+end;
+
+procedure TFrmMain.NewPrintScreenClick(Sender: TObject);
+begin
+  newCapture;
 end;
 
 procedure TFrmMain.showSplash;

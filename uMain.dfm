@@ -76,5 +76,9 @@ object FrmMain: TFrmMain
   object PopupMenu: TPopupMenu
     Left = 424
     Top = 56
+    object NewPrintScreen: TMenuItem
+      Caption = 'New Print Screen'
+      OnClick = NewPrintScreenClick
+    end
   end
 end
