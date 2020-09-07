@@ -5,16 +5,14 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Buttons,
-  Vcl.Imaging.pngimage, Vcl.Menus;
+  Vcl.Imaging.pngimage;
 
 type
   TFrmMain = class(TForm)
     pnlPrint: TPanel;
     pnlMenu: TPanel;
     imgMenu: TImage;
-    PopupMenu: TPopupMenu;
     procedure FormShow(Sender: TObject);
-    procedure imgMenuClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -33,14 +31,6 @@ uses uSplash;
 procedure TFrmMain.FormShow(Sender: TObject);
 begin
   showSplash;
-end;
-
-procedure TFrmMain.imgMenuClick(Sender: TObject);
-begin
-  with TButton(Sender).ClientToScreen(point(TButton(Sender).Width, TButton(Sender).Height)) do
-  begin
-    PopupMenu.Popup(X - pnlMenu.Width,Y);
-  end;
 end;
 
 procedure TFrmMain.showSplash;

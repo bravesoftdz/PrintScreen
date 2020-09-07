@@ -41,7 +41,6 @@ object FrmMain: TFrmMain
         Top = 1
         Width = 58
         Height = 48
-        Cursor = crHandPoint
         Hint = 'Abrir menu'
         Align = alClient
         Center = True
@@ -52,17 +51,13 @@ object FrmMain: TFrmMain
           3F4944415478DA6364A03160A487058781D88646E61F0159F09FD63EA0B905B4
           0CA2C37489E4510B085A309A0F085A309A0F468005A3F980A005A3F9002F0000
           E47D10A2788B84A50000000049454E44AE426082}
-        PopupMenu = PopupMenu
         Proportional = True
         ShowHint = True
-        OnClick = imgMenuClick
-        ExplicitLeft = 2
-        ExplicitTop = 2
+        ExplicitLeft = 8
+        ExplicitTop = 8
+        ExplicitWidth = 105
+        ExplicitHeight = 105
       end
     end
-  end
-  object PopupMenu: TPopupMenu
-    Left = 352
-    Top = 64
   end
 end
