@@ -9,13 +9,9 @@ uses
 
 type
   TFrmMain = class(TForm)
-    pnlHeader: TPanel;
-    btnSave: TImage;
-    btnNew: TImage;
-    pnlSave: TPanel;
-    pnlNew: TPanel;
-    Panel1: TPanel;
     pnlPrint: TPanel;
+    pnlMenu: TPanel;
+    imgMenu: TImage;
     procedure FormShow(Sender: TObject);
   private
     { Private declarations }
