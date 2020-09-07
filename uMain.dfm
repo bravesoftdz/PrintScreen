@@ -27,6 +27,17 @@ object FrmMain: TFrmMain
     Align = alClient
     ParentBackground = False
     TabOrder = 0
+    object imgPrint: TImage
+      Left = 1
+      Top = 1
+      Width = 582
+      Height = 357
+      Align = alClient
+      ExplicitLeft = 280
+      ExplicitTop = 128
+      ExplicitWidth = 105
+      ExplicitHeight = 105
+    end
     object pnlMenu: TPanel
       Left = 1
       Top = 1

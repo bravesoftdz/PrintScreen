@@ -13,6 +13,7 @@ type
     pnlMenu: TPanel;
     imgMenu: TImage;
     PopupMenu: TPopupMenu;
+    imgPrint: TImage;
     procedure FormShow(Sender: TObject);
     procedure imgMenuClick(Sender: TObject);
   private
