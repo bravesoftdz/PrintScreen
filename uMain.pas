@@ -20,6 +20,7 @@ type
     { Private declarations }
   public
     procedure showSplash;
+    procedure newCapture;
     function captureScreen: TBitmap;
   end;
 
@@ -74,6 +75,14 @@ begin
   begin
     PopupMenu.Popup(x - pnlMenu.Width, y);
   end;
+end;
+
+procedure TFrmMain.newCapture;
+begin
+  pnlMenu.Visible := False;
+  imgPrint.Picture.Assign(captureScreen);
+  pnlMenu.Visible := True;
+  FrmMain.TransparentColor := False;
 end;
 
 procedure TFrmMain.showSplash;
