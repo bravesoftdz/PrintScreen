@@ -25,9 +25,6 @@ object FrmMain: TFrmMain
     Align = alClient
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 50
-    ExplicitWidth = 614
-    ExplicitHeight = 304
     object pnlMenu: TPanel
       Left = 1
       Top = 1
@@ -41,6 +38,7 @@ object FrmMain: TFrmMain
         Top = 1
         Width = 58
         Height = 48
+        Cursor = crHandPoint
         Hint = 'Abrir menu'
         Align = alClient
         Center = True
@@ -53,11 +51,16 @@ object FrmMain: TFrmMain
           E47D10A2788B84A50000000049454E44AE426082}
         Proportional = True
         ShowHint = True
+        OnClick = imgMenuClick
         ExplicitLeft = 8
         ExplicitTop = 8
         ExplicitWidth = 105
         ExplicitHeight = 105
       end
     end
+  end
+  object PopupMenu: TPopupMenu
+    Left = 424
+    Top = 56
   end
 end
