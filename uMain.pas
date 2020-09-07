@@ -56,7 +56,7 @@ begin
 
     result.Canvas.CopyRect(
       Rect(0, 0, imgPrint.Width, imgPrint.Height), canvas,
-      Rect(aX - pnlPrint.Width, aY - pnlPrint.Height, aX, aY));
+      Rect(aX - imgPrint.Width, aY - imgPrint.Height, aX, aY));
   finally
     canvas.Free;
     ReleaseDC(0, DC);
