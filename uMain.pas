@@ -20,6 +20,7 @@ type
     { Private declarations }
   public
     procedure showSplash;
+    function captureScreen: TBitmap;
   end;
 
 var
@@ -30,6 +31,37 @@ implementation
 {$R *.dfm}
 
 uses uSplash;
+
+function TFrmMain.captureScreen: TBitmap;
+var
+  dc: hdc;
+  canvas: TCanvas;
+  aX: integer;
+  aY: integer;
+begin
+  try
+    result := TBitmap.Create;
+    result.Width := pnlPrint.Width;
+    result.Height := pnlPrint.Height;
+
+    dc := GetDc(0);
+    canvas := TCanvas.Create;
+    canvas.Handle := DC;
+
+    with imgPrint.ClientToScreen(point(imgPrint.Width, imgPrint.Height)) do
+    begin
+      aX := x;
+      aY := y;
+    end;
+
+    result.Canvas.CopyRect(
+      Rect(0, 0, imgPrint.Width, imgPrint.Height), canvas,
+      Rect(aX - pnlPrint.Width, aY - pnlPrint.Height, aX, aY));
+  finally
+    canvas.Free;
+    ReleaseDC(0, DC);
+  end;
+end;
 
 procedure TFrmMain.FormShow(Sender: TObject);
 begin
