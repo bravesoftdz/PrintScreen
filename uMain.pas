@@ -23,7 +23,7 @@ type
     { Private declarations }
   public
     procedure showSplash;
-    procedure newCapture;
+    procedure newCapture(img: TBitmap);
     function captureScreen: TBitmap;
   end;
 
@@ -72,7 +72,7 @@ procedure TFrmMain.FormKeyDown(Sender: TObject; var Key: Word;
 begin
   if (ssCtrl in Shift) and (chr(Key) in ['N','n']) then
   begin
-    newCapture;
+    newCapture(captureScreen);
   end;
 
 end;
@@ -90,17 +90,17 @@ begin
   end;
 end;
 
-procedure TFrmMain.newCapture;
+procedure TFrmMain.newCapture(img: TImage);
 begin
   pnlMenu.Visible := False;
-  imgPrint.Picture.Assign(captureScreen);
+  imgPrint.Picture.Assign(img);
   pnlMenu.Visible := True;
   FrmMain.TransparentColor := False;
 end;
 
 procedure TFrmMain.NewPrintScreenClick(Sender: TObject);
 begin
-  newCapture;
+  newCapture(captureScreen);
 end;
 
 procedure TFrmMain.showSplash;
