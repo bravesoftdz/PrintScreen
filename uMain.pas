@@ -43,10 +43,12 @@ var
   aX: integer;
   aY: integer;
 begin
+  pnlMenu.Visible := False;
+
   try
     result := TBitmap.Create;
-    result.Width := pnlPrint.Width;
-    result.Height := pnlPrint.Height;
+    result.Width := imgPrint.Width;
+    result.Height := imgPrint.Height;
 
     dc := GetDc(0);
     canvas := TCanvas.Create;
@@ -65,6 +67,8 @@ begin
     canvas.Free;
     ReleaseDC(0, DC);
   end;
+
+  pnlMenu.Visible := True;
 end;
 
 procedure TFrmMain.FormKeyDown(Sender: TObject; var Key: Word;
