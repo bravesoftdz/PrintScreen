@@ -94,11 +94,9 @@ begin
   end;
 end;
 
-procedure TFrmMain.newCapture(img: TImage);
+procedure TFrmMain.newCapture(img: TBitmap);
 begin
-  pnlMenu.Visible := False;
   imgPrint.Picture.Assign(img);
-  pnlMenu.Visible := True;
   FrmMain.TransparentColor := False;
 end;
 
