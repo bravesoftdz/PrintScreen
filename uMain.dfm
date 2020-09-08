@@ -82,5 +82,9 @@ object FrmMain: TFrmMain
       ShortCut = 16462
       OnClick = NewPrintScreenClick
     end
+    object SavePrintScreen: TMenuItem
+      Caption = 'Save Print Screen'
+      OnClick = SavePrintScreenClick
+    end
   end
 end

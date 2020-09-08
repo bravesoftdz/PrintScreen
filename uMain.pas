@@ -15,15 +15,18 @@ type
     PopupMenu: TPopupMenu;
     imgPrint: TImage;
     NewPrintScreen: TMenuItem;
+    SavePrintScreen: TMenuItem;
     procedure FormShow(Sender: TObject);
     procedure imgMenuClick(Sender: TObject);
     procedure NewPrintScreenClick(Sender: TObject);
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure SavePrintScreenClick(Sender: TObject);
   private
     { Private declarations }
   public
     procedure showSplash;
     procedure newCapture(img: TBitmap);
+    procedure saveCapture(img: TImage);
     function captureScreen: TBitmap;
   end;
 
@@ -103,6 +106,38 @@ end;
 procedure TFrmMain.NewPrintScreenClick(Sender: TObject);
 begin
   newCapture(captureScreen);
+end;
+
+procedure TFrmMain.saveCapture(img: TImage);
+var
+  saveDialog: TSaveDialog;
+  caminho : string;
+begin
+  try
+    saveDialog := TSaveDialog.Create(nil);
+
+    with saveDialog do
+    begin
+      Filter := 'Bitmap Image (.bmp)|*.bmp|JPEG Image (.jpeg)|*.jpeg |Png Image (.png)|*.png';
+      FilterIndex := 1;
+      FileName := 'image';
+      DefaultExt := 'bmp';
+    end;
+
+    if saveDialog.Execute then
+    begin
+      caminho := saveDialog.FileName;
+      img.Picture.SaveToFile(Caminho);
+    end;
+
+  finally
+    FreeAndNil(saveDialog);
+  end;
+end;
+
+procedure TFrmMain.SavePrintScreenClick(Sender: TObject);
+begin
+  //
 end;
 
 procedure TFrmMain.showSplash;
