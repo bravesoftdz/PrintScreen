@@ -63,9 +63,7 @@ begin
       aY := y;
     end;
 
-    result.Canvas.CopyRect(
-      Rect(0, 0, imgPrint.Width, imgPrint.Height), canvas,
-      Rect(aX - imgPrint.Width, aY - imgPrint.Height, aX, aY));
+    result.Canvas.CopyRect(Rect(0, 0, imgPrint.Width, imgPrint.Height), canvas, Rect(aX - imgPrint.Width, aY - imgPrint.Height, aX, aY));
   finally
     canvas.Free;
     ReleaseDC(0, DC);
@@ -140,7 +138,7 @@ end;
 
 procedure TFrmMain.SavePrintScreenClick(Sender: TObject);
 begin
-  //
+  saveCapture(imgPrint);
 end;
 
 procedure TFrmMain.showSplash;
