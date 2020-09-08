@@ -113,25 +113,28 @@ var
   saveDialog: TSaveDialog;
   caminho : string;
 begin
-  try
-    saveDialog := TSaveDialog.Create(nil);
+  if not FrmMain.TransparentColor then
+  begin
+    try
+      saveDialog := TSaveDialog.Create(nil);
 
-    with saveDialog do
-    begin
-      Filter := 'Bitmap Image (.bmp)|*.bmp|JPEG Image (.jpeg)|*.jpeg |Png Image (.png)|*.png';
-      FilterIndex := 1;
-      FileName := 'image';
-      DefaultExt := 'bmp';
+      with saveDialog do
+      begin
+        Filter := 'Bitmap Image (.bmp)|*.bmp|JPEG Image (.jpeg)|*.jpeg |Png Image (.png)|*.png';
+        FilterIndex := 1;
+        FileName := 'image';
+        DefaultExt := 'bmp';
+      end;
+
+      if saveDialog.Execute then
+      begin
+        caminho := saveDialog.FileName;
+        img.Picture.SaveToFile(Caminho);
+      end;
+
+    finally
+      FreeAndNil(saveDialog);
     end;
-
-    if saveDialog.Execute then
-    begin
-      caminho := saveDialog.FileName;
-      img.Picture.SaveToFile(Caminho);
-    end;
-
-  finally
-    FreeAndNil(saveDialog);
   end;
 end;
 
