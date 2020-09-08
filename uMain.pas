@@ -18,6 +18,7 @@ type
     procedure FormShow(Sender: TObject);
     procedure imgMenuClick(Sender: TObject);
     procedure NewPrintScreenClick(Sender: TObject);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
   private
     { Private declarations }
   public
@@ -64,6 +65,16 @@ begin
     canvas.Free;
     ReleaseDC(0, DC);
   end;
+end;
+
+procedure TFrmMain.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  if (ssCtrl in Shift) and (chr(Key) in ['N','n']) then
+  begin
+    newCapture;
+  end;
+
 end;
 
 procedure TFrmMain.FormShow(Sender: TObject);

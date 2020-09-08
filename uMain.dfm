@@ -16,6 +16,7 @@ object FrmMain: TFrmMain
   OldCreateOrder = False
   ParentBiDiMode = False
   Position = poScreenCenter
+  OnKeyDown = FormKeyDown
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
@@ -78,6 +79,7 @@ object FrmMain: TFrmMain
     Top = 56
     object NewPrintScreen: TMenuItem
       Caption = 'New Print Screen'
+      ShortCut = 16462
       OnClick = NewPrintScreenClick
     end
   end
