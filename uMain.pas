@@ -78,6 +78,10 @@ begin
   if (ssCtrl in Shift) and (chr(Key) in ['N','n']) then
   begin
     newCapture(captureScreen);
+  end
+  else if (ssCtrl in Shift) and (chr(Key) in ['S','s']) then
+  begin
+    saveCapture(imgPrint);
   end;
 
 end;
