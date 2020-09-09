@@ -99,7 +99,12 @@ begin
   else if (ssCtrl in Shift) and (chr(Key) in ['S','s']) then
   begin
     saveCapture(imgPrint);
+  end
+  else if (ssCtrl in Shift) and (chr(Key) in ['D','d']) then
+  begin
+    deleteCapture(imgPrint);
   end;
+
 
 end;
 
