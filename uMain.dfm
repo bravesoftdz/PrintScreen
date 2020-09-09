@@ -87,5 +87,9 @@ object FrmMain: TFrmMain
       ShortCut = 16467
       OnClick = SavePrintScreenClick
     end
+    object DeletePrintScreen: TMenuItem
+      Caption = 'Delete Print Screen'
+      OnClick = DeletePrintScreenClick
+    end
   end
 end

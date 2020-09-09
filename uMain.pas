@@ -16,17 +16,20 @@ type
     imgPrint: TImage;
     NewPrintScreen: TMenuItem;
     SavePrintScreen: TMenuItem;
+    DeletePrintScreen: TMenuItem;
     procedure FormShow(Sender: TObject);
     procedure imgMenuClick(Sender: TObject);
     procedure NewPrintScreenClick(Sender: TObject);
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure SavePrintScreenClick(Sender: TObject);
+    procedure DeletePrintScreenClick(Sender: TObject);
   private
     { Private declarations }
   public
     procedure showSplash;
     procedure newCapture(img: TBitmap);
     procedure saveCapture(img: TImage);
+    procedure deleteCapture(img: TImage);
     function captureScreen: TBitmap;
   end;
 
@@ -70,6 +73,20 @@ begin
   end;
 
   pnlMenu.Visible := True;
+end;
+
+procedure TFrmMain.deleteCapture(img: TImage);
+begin
+  if not img.Picture.Bitmap.Empty then
+  begin
+    img.Picture.Assign(nil);
+    frmMain.TransparentColor := True;
+  end;
+end;
+
+procedure TFrmMain.DeletePrintScreenClick(Sender: TObject);
+begin
+  deleteCapture(imgPrint);
 end;
 
 procedure TFrmMain.FormKeyDown(Sender: TObject; var Key: Word;
