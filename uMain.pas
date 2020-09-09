@@ -132,7 +132,7 @@ var
   saveDialog: TSaveDialog;
   caminho : string;
 begin
-  if not FrmMain.TransparentColor then
+  if not img.Picture.Bitmap.Empty then
   begin
     try
       saveDialog := TSaveDialog.Create(nil);
@@ -149,6 +149,7 @@ begin
       begin
         caminho := saveDialog.FileName;
         img.Picture.SaveToFile(Caminho);
+        deleteCapture(img);
       end;
 
     finally
