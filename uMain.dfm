@@ -39,39 +39,26 @@ object FrmMain: TFrmMain
       ExplicitWidth = 105
       ExplicitHeight = 105
     end
-    object pnlMenu: TPanel
-      Left = 1
-      Top = 1
-      Width = 60
-      Height = 50
+    object imgMenu: TImage
+      Left = 3
+      Top = 3
+      Width = 40
+      Height = 38
+      Cursor = crHandPoint
+      Hint = 'Abrir menu'
       Align = alCustom
-      AutoSize = True
-      TabOrder = 0
-      object imgMenu: TImage
-        Left = 1
-        Top = 1
-        Width = 58
-        Height = 48
-        Cursor = crHandPoint
-        Hint = 'Abrir menu'
-        Align = alClient
-        Center = True
-        ParentShowHint = False
-        Picture.Data = {
-          0954506E67496D61676589504E470D0A1A0A0000000D49484452000000180000
-          00180806000000E0773DF800000006624B474400FF00FF00FFA0BDA793000000
-          3F4944415478DA6364A03160A487058781D88646E61F0159F09FD63EA0B905B4
-          0CA2C37489E4510B085A309A0F085A309A0F468005A3F980A005A3F9002F0000
-          E47D10A2788B84A50000000049454E44AE426082}
-        Proportional = True
-        ShowHint = True
-        Stretch = True
-        OnClick = imgMenuClick
-        ExplicitLeft = 8
-        ExplicitTop = 8
-        ExplicitWidth = 105
-        ExplicitHeight = 105
-      end
+      Center = True
+      ParentShowHint = False
+      Picture.Data = {
+        0954506E67496D61676589504E470D0A1A0A0000000D49484452000000180000
+        0017080600000011218F2D000000097048597300000B1300000B1301009A9C18
+        000000464944415478DA63949595FDCF4043C008B2E01D6F114D0C17FADC375C
+        2CA089E950C0F8FF3F4DCDA7830F8647248FA622BC168CA6A2C161014D4C8782
+        D15484178CA622A20000AE0B47C7D25965AB0000000049454E44AE426082}
+      Proportional = True
+      ShowHint = True
+      Stretch = True
+      OnClick = imgMenuClick
     end
   end
   object PopupMenu: TPopupMenu

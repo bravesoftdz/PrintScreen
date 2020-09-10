@@ -10,7 +10,6 @@ uses
 type
   TFrmMain = class(TForm)
     pnlPrint: TPanel;
-    pnlMenu: TPanel;
     imgMenu: TImage;
     PopupMenu: TPopupMenu;
     imgPrint: TImage;
@@ -49,7 +48,7 @@ var
   aX: integer;
   aY: integer;
 begin
-  pnlMenu.Visible := False;
+  imgMenu.Visible := False;
 
   try
     result := TBitmap.Create;
@@ -72,7 +71,7 @@ begin
     ReleaseDC(0, DC);
   end;
 
-  pnlMenu.Visible := True;
+  imgMenu.Visible := True;
 end;
 
 procedure TFrmMain.deleteCapture(img: TImage);
@@ -117,7 +116,7 @@ procedure TFrmMain.imgMenuClick(Sender: TObject);
 begin
   with TButton(Sender).ClientToScreen(point(TButton(Sender).Width, TButton(Sender).Height)) do
   begin
-    PopupMenu.Popup(x - pnlMenu.Width, y);
+    PopupMenu.Popup(x - imgMenu.Width, y);
   end;
 end;
 
