@@ -22,6 +22,8 @@ type
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure SavePrintScreenClick(Sender: TObject);
     procedure DeletePrintScreenClick(Sender: TObject);
+    procedure PopupMenuChange(Sender: TObject; Source: TMenuItem;
+      Rebuild: Boolean);
   private
     { Private declarations }
   public
@@ -129,6 +131,23 @@ end;
 procedure TFrmMain.NewPrintScreenClick(Sender: TObject);
 begin
   newCapture(captureScreen);
+end;
+
+procedure TFrmMain.PopupMenuChange(Sender: TObject; Source: TMenuItem;
+  Rebuild: Boolean);
+begin
+  if imgPrint.Picture.Bitmap.Empty then
+  begin
+    NewPrintScreen.Visible := True;
+    SavePrintScreen.Visible := False;
+    DeletePrintScreen.Visible := False;
+  end
+  else
+  begin
+    NewPrintScreen.Visible := False;
+    SavePrintScreen.Visible := True;
+    DeletePrintScreen.Visible := True;
+  end;
 end;
 
 procedure TFrmMain.saveCapture(img: TImage);

@@ -62,6 +62,7 @@ object FrmMain: TFrmMain
     end
   end
   object PopupMenu: TPopupMenu
+    OnChange = PopupMenuChange
     Left = 424
     Top = 56
     object NewPrintScreen: TMenuItem
