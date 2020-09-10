@@ -34,10 +34,8 @@ object FrmMain: TFrmMain
       Width = 582
       Height = 357
       Align = alClient
-      ExplicitLeft = 280
-      ExplicitTop = 128
-      ExplicitWidth = 105
-      ExplicitHeight = 105
+      ExplicitLeft = 2
+      ExplicitTop = 2
     end
     object imgMenu: TImage
       Left = 3
@@ -79,6 +77,13 @@ object FrmMain: TFrmMain
       Caption = 'Delete Print Screen'
       ShortCut = 16452
       OnClick = DeletePrintScreenClick
+    end
+    object N1: TMenuItem
+      Caption = '-'
+    end
+    object DeleteBorder: TMenuItem
+      Caption = 'Delete Border'
+      OnClick = DeleteBorderClick
     end
   end
 end
