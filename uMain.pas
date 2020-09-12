@@ -18,6 +18,7 @@ type
     DeletePrintScreen: TMenuItem;
     N1: TMenuItem;
     DeleteBorder: TMenuItem;
+    pnlMenu: TPanel;
     procedure FormShow(Sender: TObject);
     procedure imgMenuClick(Sender: TObject);
     procedure NewPrintScreenClick(Sender: TObject);
@@ -53,7 +54,7 @@ var
   aX: integer;
   aY: integer;
 begin
-  imgMenu.Visible := False;
+  pnlMenu.Visible := False;
 
   try
     result := TBitmap.Create;
@@ -76,7 +77,7 @@ begin
     ReleaseDC(0, DC);
   end;
 
-  imgMenu.Visible := True;
+  pnlMenu.Visible := True;
 end;
 
 procedure TFrmMain.deleteCapture(img: TImage);
