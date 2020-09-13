@@ -180,12 +180,14 @@ begin
   if imgPrint.Picture.Bitmap.Empty then
   begin
     NewPrintScreen.Visible := True;
+    NewFullPrintScreen.Visible := True;
     SavePrintScreen.Visible := False;
     DeletePrintScreen.Visible := False;
   end
   else
   begin
     NewPrintScreen.Visible := False;
+    NewFullPrintScreen.Visible := False;
     SavePrintScreen.Visible := True;
     DeletePrintScreen.Visible := True;
   end;
