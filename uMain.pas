@@ -85,7 +85,7 @@ begin
   if not img.Picture.Bitmap.Empty then
   begin
     img.Picture.Assign(nil);
-    frmMain.TransparentColor := True;
+    pnlPrint.Color := clBtnFace;
   end;
 end;
 
@@ -155,7 +155,7 @@ end;
 procedure TFrmMain.newCapture(img: TBitmap);
 begin
   imgPrint.Picture.Assign(img);
-  FrmMain.TransparentColor := False;
+  pnlPrint.Color := clBlack;
 end;
 
 procedure TFrmMain.NewPrintScreenClick(Sender: TObject);

@@ -38,20 +38,13 @@ object FrmMain: TFrmMain
       ExplicitTop = 2
     end
     object pnlMenu: TPanel
-      Left = 1
-      Top = 1
-      Width = 582
-      Height = 357
-      Margins.Left = 0
-      Margins.Top = 0
-      Margins.Right = 0
-      Margins.Bottom = 0
-      Align = alClient
-      Ctl3D = True
-      ParentCtl3D = False
+      Left = 0
+      Top = 0
+      Width = 43
+      Height = 41
+      Align = alCustom
+      ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = -31
-      ExplicitTop = 17
       object imgMenu: TImage
         Left = 3
         Top = 3
