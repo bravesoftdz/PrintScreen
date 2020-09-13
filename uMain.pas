@@ -129,6 +129,10 @@ begin
   begin
     newCapture(captureScreen);
   end
+  else if (ssCtrl in Shift) and (chr(Key) in ['F','f']) then
+  begin
+    newCapture(captureFullScreen);
+  end
   else if (ssCtrl in Shift) and (chr(Key) in ['S','s']) then
   begin
     saveCapture(imgPrint);
@@ -137,7 +141,6 @@ begin
   begin
     deleteCapture(imgPrint);
   end;
-
 
 end;
 
