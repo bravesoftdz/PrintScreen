@@ -85,8 +85,14 @@ var
   canvas: TCanvas;
   aX: integer;
   aY: integer;
+  pnlMenuVisible: Boolean;
 begin
-  pnlMenu.Visible := False;
+  pnlMenuVisible := pnlMenu.Visible;
+
+  if pnlMenuVisible then
+  begin
+    pnlMenu.Visible := False;
+  end;
 
   try
     result := TBitmap.Create;
@@ -109,7 +115,10 @@ begin
     ReleaseDC(0, DC);
   end;
 
-  pnlMenu.Visible := True;
+  if pnlMenuVisible then
+  begin
+    pnlMenu.Visible := True;
+  end;
 end;
 
 procedure TFrmMain.deleteCapture(img: TImage);
