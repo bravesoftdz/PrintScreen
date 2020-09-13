@@ -28,6 +28,7 @@ object FrmMain: TFrmMain
     Align = alClient
     ParentBackground = False
     TabOrder = 0
+    Visible = False
     object imgPrint: TImage
       Left = 1
       Top = 1
@@ -80,6 +81,10 @@ object FrmMain: TFrmMain
       Caption = 'New Print Screen'
       ShortCut = 16462
       OnClick = NewPrintScreenClick
+    end
+    object NewFullPrintScreen: TMenuItem
+      Caption = 'Full Print Screen'
+      OnClick = NewFullPrintScreenClick
     end
     object SavePrintScreen: TMenuItem
       Caption = 'Save Print Screen'
