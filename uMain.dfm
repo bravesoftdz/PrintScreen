@@ -102,6 +102,7 @@ object FrmMain: TFrmMain
     end
     object HideShow: TMenuItem
       Caption = 'Hide/ Show Menu'
+      ShortCut = 16461
       OnClick = HideShowClick
     end
   end

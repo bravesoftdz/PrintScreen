@@ -144,6 +144,10 @@ begin
   else if (ssCtrl in Shift) and (chr(Key) in ['D','d']) then
   begin
     deleteCapture(imgPrint);
+  end
+  else if (ssCtrl in Shift) and (chr(Key) in ['M','m']) then
+  begin
+    hideShowMenu;
   end;
 
 end;
