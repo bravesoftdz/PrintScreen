@@ -143,7 +143,11 @@ end;
 
 procedure TFrmMain.FormShow(Sender: TObject);
 begin
-  showSplash;
+  if not pnlPrint.Visible then
+  begin
+    pnlPrint.Visible := True;
+    showSplash;
+  end;
 end;
 
 procedure TFrmMain.imgMenuClick(Sender: TObject);
