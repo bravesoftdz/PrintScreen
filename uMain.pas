@@ -16,8 +16,6 @@ type
     NewPrintScreen: TMenuItem;
     SavePrintScreen: TMenuItem;
     DeletePrintScreen: TMenuItem;
-    N1: TMenuItem;
-    DeleteBorder: TMenuItem;
     pnlMenu: TPanel;
     procedure FormShow(Sender: TObject);
     procedure imgMenuClick(Sender: TObject);
@@ -27,7 +25,6 @@ type
     procedure DeletePrintScreenClick(Sender: TObject);
     procedure PopupMenuChange(Sender: TObject; Source: TMenuItem;
       Rebuild: Boolean);
-    procedure DeleteBorderClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -94,32 +91,6 @@ begin
   deleteCapture(imgPrint);
 end;
 
-procedure TFrmMain.DeleteBorderClick(Sender: TObject);
-begin
-  frmMain.BorderStyle := bsNone;
-
-  if frmMain.Left < 0 then
-  begin
-    frmMain.Left := 0;
-  end;
-
-  if frmMain.Top < 0 then
-  begin
-    frmMain.Top := 0;
-  end;
-
-  if frmMain.Width > screen.Width then
-  begin
-    frmMain.Width := screen.Width;
-  end;
-
-  if frmMain.Height > screen.Height then
-  begin
-    frmMain.Height := screen.Height;
-  end;
-
-end;
-
 procedure TFrmMain.FormKeyDown(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
@@ -177,15 +148,6 @@ begin
     NewPrintScreen.Visible := False;
     SavePrintScreen.Visible := True;
     DeletePrintScreen.Visible := True;
-  end;
-
-  if frmMain.BorderStyle = bsNone then
-  begin
-    DeleteBorder.Visible := False;
-  end
-  else
-  begin
-    DeleteBorder.Visible := True;
   end;
 end;
 

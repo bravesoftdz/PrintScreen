@@ -38,21 +38,21 @@ object FrmMain: TFrmMain
       ExplicitTop = 2
     end
     object pnlMenu: TPanel
-      Left = 0
-      Top = 0
+      Left = 3
+      Top = 3
       Width = 43
       Height = 41
       Align = alCustom
       ParentBackground = False
       TabOrder = 0
       object imgMenu: TImage
-        Left = 3
-        Top = 3
-        Width = 40
-        Height = 38
+        Left = 1
+        Top = 1
+        Width = 41
+        Height = 39
         Cursor = crHandPoint
         Hint = 'Abrir menu'
-        Align = alCustom
+        Align = alClient
         Center = True
         ParentShowHint = False
         Picture.Data = {
@@ -65,6 +65,10 @@ object FrmMain: TFrmMain
         ShowHint = True
         Stretch = True
         OnClick = imgMenuClick
+        ExplicitLeft = 3
+        ExplicitTop = 3
+        ExplicitWidth = 40
+        ExplicitHeight = 38
       end
     end
   end
@@ -86,13 +90,6 @@ object FrmMain: TFrmMain
       Caption = 'Delete Print Screen'
       ShortCut = 16452
       OnClick = DeletePrintScreenClick
-    end
-    object N1: TMenuItem
-      Caption = '-'
-    end
-    object DeleteBorder: TMenuItem
-      Caption = 'Delete Border'
-      OnClick = DeleteBorderClick
     end
   end
 end
