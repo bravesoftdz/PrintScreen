@@ -18,6 +18,8 @@ type
     DeletePrintScreen: TMenuItem;
     pnlMenu: TPanel;
     NewFullPrintScreen: TMenuItem;
+    N1: TMenuItem;
+    HideShow: TMenuItem;
     procedure FormShow(Sender: TObject);
     procedure imgMenuClick(Sender: TObject);
     procedure NewPrintScreenClick(Sender: TObject);
@@ -27,6 +29,7 @@ type
     procedure PopupMenuChange(Sender: TObject; Source: TMenuItem;
       Rebuild: Boolean);
     procedure NewFullPrintScreenClick(Sender: TObject);
+    procedure HideShowClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -34,6 +37,7 @@ type
     procedure newCapture(img: TBitmap);
     procedure saveCapture(img: TImage);
     procedure deleteCapture(img: TImage);
+    procedure hideShowMenu;
     function captureScreen: TBitmap;
     function captureFullScreen: TBitmap;
   end;
@@ -151,6 +155,16 @@ begin
     pnlPrint.Visible := True;
     showSplash;
   end;
+end;
+
+procedure TFrmMain.HideShowClick(Sender: TObject);
+begin
+  hideShowMenu;
+end;
+
+procedure TFrmMain.hideShowMenu;
+begin
+  pnlMenu.Visible := not pnlMenu.Visible;
 end;
 
 procedure TFrmMain.imgMenuClick(Sender: TObject);

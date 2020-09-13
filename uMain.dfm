@@ -97,5 +97,12 @@ object FrmMain: TFrmMain
       ShortCut = 16452
       OnClick = DeletePrintScreenClick
     end
+    object N1: TMenuItem
+      Caption = '-'
+    end
+    object HideShow: TMenuItem
+      Caption = 'Hide/ Show Menu'
+      OnClick = HideShowClick
+    end
   end
 end
